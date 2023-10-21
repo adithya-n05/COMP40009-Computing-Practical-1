@@ -1,0 +1,55 @@
+const M = 4
+
+//1ai
+MILK = LEVEL[M],
+LEVEL[i:0..M] = (when (i > 0) half_glass -> LEVEL[i-1]|
+                 when (i > 1) glass -> LEVEL[i-2]|
+                 level[i] -> LEVEL[i]|
+                 when(i == 0) shop -> LEVEL[M]).
+
+//1aii
+RANCIDLEVEL = LEVEL[0],
+LEVEL[i:0..4] = (shop -> LEVEL[0]|
+                   when (i < 4) {glass, half_glass, shop} -> LEVEL[0] |
+                   when (i < 4) nextDay -> LEVEL[i+1] |
+                   when (i == 4) nextDay -> LEVEL[i] |
+                   when (i == 4) shop -> LEVEL[0] |
+                   when (i == 4) {glass, half_glass} -> ERROR).
+
+//1aiii
+SHOPPING = (shop -> CLOUD | shop -> RAIN | shop -> SUN),
+CLOUD = (cloudy -> {beer,milk} -> SHOPPING),
+RAIN = (rainy -> milk -> SHOPPING), 
+SUN = (sunny -> beer -> SHOPPING).
+
+//1bi
+property FILE = (open -> OPEN | close -> FILE),
+         OPEN = (read -> OPEN |
+                 close -> FILE |
+                 write -> DIRTY),
+          DIRTY = (read -> DIRTY |
+                   write -> DIRTY |
+                   flush -> OPEN).
+
+//1bii 
+OBJECT = (new -> outOfMemory -> OBJECT |
+          new -> reference -> CREATED),
+CREATED = (methodCall -> CREATED |
+           destroy -> OBJECT).
+
+//1biii
+const MAX = 4
+
+SEQ_READ(N=2) = (open -> OPEN[N]),
+OPEN[i:1..MAX] = (read -> OPEN[i-1]),
+OPEN[0] = (close -> END).
+
+/*||CONCAT = (a:SEQ_READ(2) || b:SEQ_READ(3))/{open/a.open, close/b.close,
+                                             continue/{a.close, b.open}}.*/
+
+//1biv
+SPACE_HOG = (new -> outOfMemory -> SPACE_HOG |
+             new -> reference -> SPACE_HOG).
+SPACED_OUT = STOP + {outOfMemory}.
+
+/*||TOGETHER = (SPACE_HOG || SPACED_OUT).*/

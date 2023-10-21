@@ -1,0 +1,19 @@
+TimesTwo = (in[i:0..3] -> OUT[i]),
+OUT[i:0..3] = (out[i*2] -> TimesTwo).
+
+property MUTEX = (enter -> exit -> MUTEX).
+
+ENTER_PIN = ENTER[3],
+ENTER[i:0..3] = (when (i>0) pin -> (ok -> ENTER[3] | nok-> ENTER[i-1])
+                |when (i==0) confiscate_card -> STOP).
+
+CYCLE(N=4) = S[0],
+S[i:0..3] = (out[i] -> S[(i+1)%N]).
+
+PERSON = (sleep -> dream -> PERSON
+         |wake -> work -> PERSON).
+INSOMNIA = STOP + {sleep}.
+||SEATTLE = (PERSON || INSOMNIA).
+
+EXIT = (in -> out -> EXIT).
+||OR = (a:EXIT || b:EXIT)/{in/{a.in, b.in}}.

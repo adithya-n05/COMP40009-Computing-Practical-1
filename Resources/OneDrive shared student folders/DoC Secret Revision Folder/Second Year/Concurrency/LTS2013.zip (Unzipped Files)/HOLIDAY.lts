@@ -1,0 +1,5 @@
+
+HOLIDAY = (start->STARTING | {end, read, rest, surf}->ERROR),
+STARTING = (surf->SURFING | {rest,start}->ERROR | read->READING | end->HOLIDAY),
+SURFING = (surf->SURFING | rest->STARTING | {end, read, start}->ERROR),
+READING = (read->READING | {end, start, surf}->ERROR). 

@@ -1,0 +1,4 @@
+AUTHOR: David Cattle
+I wrote these LTS for the 2014 question 1.a,
+They may be helpful if you are interested in seeing different solutions.
+

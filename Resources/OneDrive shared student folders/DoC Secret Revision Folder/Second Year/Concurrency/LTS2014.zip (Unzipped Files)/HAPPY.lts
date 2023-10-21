@@ -1,0 +1,8 @@
+
+
+HAPPY = (wakeup->WOKEN |  {eat, read, rest, sleep, surf} ->ERROR),
+WOKEN = ({read,rest,sleep,surf,wakeup} -> ERROR | eat->EATING),
+EATING = ({eat, wakeup} ->ERROR | rest->EATING | surf->SURFING | sleep->HAPPY | read->READING),
+SURFING = (surf->SURFING | eat->EATING | {read, rest, sleep, wakeup} -> ERROR),
+READING = (read->READING | eat->EATING | {rest, sleep, surf, wakeup} -> ERROR).
+

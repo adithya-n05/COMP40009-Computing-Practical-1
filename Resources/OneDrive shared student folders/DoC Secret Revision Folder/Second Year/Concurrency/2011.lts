@@ -1,0 +1,47 @@
+//1ai
+TEA_ROBOT = (sugar_please[i:1..3] -> ADD_SUGAR[i]),
+ADD_SUGAR[i:1..3] = (when (i == 1) sugar -> TEA_ROBOT|
+                     when (i > 1) sugar -> ADD_SUGAR[i-1]).
+
+//1aii property -> propertea... see what they did there?
+property PROPER_TEA = (milk -> tea -> sugar-> drink -> PROPER_TEA) +{slurp, drink}.
+
+//1aiii
+const N = 4
+WATER_SENSOR = LEVEL[N],
+LEVEL[i:0..4] = (waterLevel[i] -> LEVEL[i] |
+                 when (i>0) {coffee, tea}.small -> LEVEL[i-1]|
+                 when (i>1) {coffee, tea}.large -> LEVEL[i-2]|
+                 refill -> LEVEL[N]).
+
+//1bi
+DISPENSER = (coin -> (requestTea -> getTea -> PAY | 
+                      requestTea -> sorryNoTea -> DISPENSER |
+                      requestCoffee -> getCoffee -> PAY |
+                      requestCoffee -> sorryNoCoffee -> DISPENSER)),
+PAY = (pay -> DISPENSER).
+
+//1bii
+property SAFE = (sip -> (tooHot -> SAFE | hot -> drink -> SAFE)).
+
+//1biii
+DRINKER = (waterANDtea -> pour -> empty -> DRINKER |
+           pour -> empty -> DRINKER).
+
+TEAPOT(N=1) = (waterANDtea -> brew -> READY[N]),
+READY[i:0..N] = (when (i > 0) pour -> READY[i-1] |
+                 when (i == 0) empty -> TEAPOT).
+
+/*||TEA_MEETING = ({ginger, fred}::TEAPOT(2) || 
+                 ginger:DRINKER ||
+                 fred:DRINKER) /{
+                   brew/{ginger.brew, fred.brew},
+                   empty/{ginger.empty, fred.empty}
+                 }.*/
+
+//1biv
+TEAorCOFFEE = (water -> tea -> TEAorCOFFEE | 
+               water -> coffee -> TEAorCOFFEE).
+SHOP = STOP + {coffee}.
+
+//||HOME = (TEAorCOFFEE || SHOP).

@@ -1,0 +1,4 @@
+const Max_coin = 4 
+const Max_hours = 4 
+PARKING_METRE = (pay[i:1..Max_coin] -> HOURS[i]) ,
+	HOURS[h:1..Max_hours] = (print_ticket[h] -> PARKING_METRE | when(h < Max_hours) pay[j:1..(Max_hours-h)] -> HOURS[h+j]).

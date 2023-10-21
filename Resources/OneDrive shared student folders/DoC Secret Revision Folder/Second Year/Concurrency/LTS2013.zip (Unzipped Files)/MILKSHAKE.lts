@@ -1,0 +1,6 @@
+MILKSHAKE = (icecream->banana->CHOOSING | ice_cream->strawberry->CHOOSING),
+CHOOSING = ({banana, strawberry}->CHOOSING
+			| mix->MIXING),
+MIXING = (milk->BLENDING
+			| serve->MILKSHAKE),
+BLENDING = (blend->MIXING).

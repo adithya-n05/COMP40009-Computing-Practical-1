@@ -1,0 +1,6 @@
+ALARM(N=5) = ALARM[N],
+ALARM[i:0..N] = (off->STOP
+				| when(i==1) tick[i]->beep->STOP
+				| when(i>1) tick[i]->ALARM[i-1]
+				| when(i==N) snooze->ALARM[i]
+				| when(i<N) snooze->ALARM).

@@ -1,0 +1,13 @@
+
+const MAX_COMP = 2
+range R = 1..MAX_COMP
+
+PROGRAM = (write->(compile->ERR[1] | compile->OKAY)),
+OKAY = (okay->run->STOP),
+ERR[i:R] = (error[i]->fix[i]-> FIX[i]),
+FIX[i:R] = (compile->OKAY
+			| when(i==1) compile->ERR[i+1] 
+			| when(i==MAX_COMP) compile->ERROR).
+
+				
+
