@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "sonnets",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "sonnets_map::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sonnets_map-Debug-8c1cf90e9efe0679765d.json",
+					"name" : "sonnets_map",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sonnets_trie::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sonnets_trie-Debug-204e13e608d41db9ede2.json",
+					"name" : "sonnets_trie",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "testA::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testA-Debug-7e203c086529c09dd8cb.json",
+					"name" : "testA",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "testB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testB-Debug-aca599e197301e6535d1.json",
+					"name" : "testB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trie::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trie-Debug-1a7d1a843a82bd52ecc1.json",
+					"name" : "trie",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug",
+		"source" : "C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

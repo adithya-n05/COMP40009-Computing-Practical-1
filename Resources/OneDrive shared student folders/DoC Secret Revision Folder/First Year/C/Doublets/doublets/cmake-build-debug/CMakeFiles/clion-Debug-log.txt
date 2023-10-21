@@ -1,0 +1,4 @@
+Cannot generate into /Users/arriky/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Codrin Cotarlan- - Computing Academic Rep/DoC Secret Revision Folder/First Year/C/Doublets/doublets/cmake-build-debug
+It is already used for project /mnt/c/Oliver Killane's Files/A - Computer Science Degree/COMP40009 - Programming/C Programming/C Past Papers/Doublets/doublets
+
+Please either delete it manually or select another generation directory

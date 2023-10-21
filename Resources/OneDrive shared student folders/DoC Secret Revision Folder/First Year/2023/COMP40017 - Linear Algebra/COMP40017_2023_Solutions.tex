@@ -1,0 +1,465 @@
+% (C) 2023 Imperial College London
+% COMP40017 Linear Algebra examination paper - May 2023
+
+\documentclass[a4paper,11pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Linear Algebra}
+\date{17 May 2023}
+\author{\texttt{COMP40017}}
+
+\pointsinrightmargin
+\marginpointname{\%}
+\boxedpoints
+\printanswers
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+    \setlength{\fboxsep}{1em}
+    \fbox{\parbox{0.8\linewidth}{%
+            Questions are \copyright\ 2023 Imperial College London.
+            The solutions presented below are offered in good faith,
+            but do not claim to be complete or correct.
+        }}
+\end{center}
+
+% Hi, glad you're here! If you can improve this solution set, please do!
+% Corrections are most welcome, and improvements such as alternative methods or
+% explanations would be greatly appreciated.
+
+\begin{questions}
+    \question
+    Let $A \vec{x}=\vec{b}$ be a system of linear equations where,
+    $$
+        A=\left[\begin{array}{cccc}
+                1  & 2 & 1 & 2 \\
+                4  & 3 & 2 & 1 \\
+                10 & 5 & 4 & 1
+            \end{array}\right] \quad \vec{b}=\left[\begin{array}{l}
+                4 \\
+                5 \\
+                7
+            \end{array}\right]
+    $$
+
+    \begin{parts}
+        \part \begin{subparts}
+            \subpart Perform elementary row operations on the augmented matrix $[A \mid \vec{b} \,]$ to reduce $A$ to its Reduced Row Echelon Form.
+
+            \begin{solution}
+                \[
+                    \left[\begin{array}{cccc|c}
+                            1  & 2 & 1 & 2 & 4 \\
+                            4  & 3 & 2 & 1 & 5 \\
+                            10 & 5 & 4 & 1 & 7
+                        \end{array}\right] \stackrel{\text { EROS }}{\longrightarrow}\left[\begin{array}{cccc|c}
+                            1 & 0 & \frac{1}{5} & 0 & -\frac{2}{5} \\[6pt]
+                            0 & 1 & \frac{2}{5} & 0 & \frac{11}{5} \\[6pt]
+                            0 & 0 & 0           & 1 & 0
+                        \end{array}\right]
+                \]
+            \end{solution}
+
+            \subpart State the free variables.
+
+            \begin{solution}
+                $x_3$ is a free variable.
+            \end{solution}
+
+            \subpart Find the general solution (solution set $S$) of $A \vec{x}=\vec{b}$ and describe it geometrically.
+
+            \begin{solution}
+                From the RREF we have the following system of equations:
+                \[
+                    \begin{cases}
+                        x_1+\frac{1}{5} x_3=\frac{-2}{5} \\
+                        x_2+\frac{2}{5} x_3=\frac{11}{5} \\
+                        x_4=0
+                    \end{cases}
+                \]
+
+                We obtain a line in $\mathbb{R}^4$. The general solution is:
+                \[
+                    \vec{x}=\left[\begin{array}{c}
+                            -\frac{2}{5} \\[6pt]
+                            \frac{11}{5} \\[6pt]
+                            0            \\[6pt]
+                            0
+                        \end{array}\right]+\lambda\left[\begin{array}{c}
+                            \frac{1}{5} \\[6pt]
+                            \frac{2}{5} \\[6pt]
+                            1           \\[6pt]
+                            0
+                        \end{array}\right]
+                \]
+
+                Since the point and the scaling factor $\lambda$ are arbitrary,
+                we can find another point on the line (taking $\lambda = 2$)
+                and scaling the direction vector by $5$ to get a simpler solution:
+                \[
+                    \vec{x}=\left[\begin{array}{c}
+                            0 \\
+                            3 \\
+                            0 \\
+                            0
+                        \end{array}\right]+\lambda'\left[\begin{array}{c}
+                            1 \\
+                            2 \\
+                            5 \\
+                            0
+                        \end{array}\right]
+                \]
+
+            \end{solution}
+        \end{subparts}
+
+        \part \begin{subparts}
+            \subpart Find the rank and nullity of $A$.
+
+            \begin{solution}
+                The rank of $A$ is $3$ and the nullity is $1$.
+            \end{solution}
+
+            \subpart Find a basis for the image space $\operatorname{im}(A)$.
+
+            \begin{solution}
+                We take the columns of $A$ that correspond to the pivot columns of the RREF of $A$.
+                \[
+                    \operatorname{span}\left\{\left[\begin{array}{c}
+                            1 \\
+                            4 \\
+                            10
+                        \end{array}\right],\left[\begin{array}{c}
+                            2 \\
+                            3 \\
+                            5
+                        \end{array}\right],\left[\begin{array}{c}
+                            1 \\
+                            2 \\
+                            4
+                        \end{array}\right]\right\}
+                \]
+            \end{solution}
+
+            \subpart Find a basis for the $\operatorname{kernel} \operatorname{ker}(A)$.
+
+            \begin{solution}
+                We take the the direction vector of the line in the general solution.
+
+                \[
+                    \operatorname{span}\left\{\left[\begin{array}{c} 1 \\ 2 \\ 5 \\ 0 \end{array}\right]\right\}
+                \]
+
+            \end{solution}
+            \subpart Find the rank and nullity of $A^{\top}$.
+
+            \begin{solution}
+                \[ \operatorname{rank}(A) = \operatorname{rank}(A^{\top}) = 3 \]
+                \[ \operatorname{null}(A^\top) = \operatorname{order}(A^\top) - \operatorname{rank}(A^\top) = 0 \]
+            \end{solution}
+
+            \subpart Find a `simple' basis for the image space $\operatorname{im}\left(A^{\top}\right)$.
+
+            \begin{solution}
+                Since $\operatorname{rank}(A^\top) = 3$, we know that all $3$ columns of $A^\top$
+                are linearly independent. Therefore, we can take the columns of $A^\top$ as a basis.
+
+                To make it `simple', we would put the columns of $A^\top$ into a matrix horizontally,
+                and then perform row operations to obtain its RREF.
+
+                However, this is identical to the RREF of $A$, which we have already calculated.
+
+                \[
+                    \operatorname{span}\left\{\left[\begin{array}{c}
+                            1           \\
+                            0           \\
+                            \frac{1}{5} \\
+                            0
+                        \end{array}\right],\left[\begin{array}{c}
+                            0           \\
+                            1           \\
+                            \frac{2}{5} \\
+                            0
+                        \end{array}\right],\left[\begin{array}{c}
+                            0 \\
+                            0 \\
+                            0 \\
+                            1
+                        \end{array}\right]\right\}
+                \]
+            \end{solution}
+
+            \subpart Find the kernel $\operatorname{ker}\left(A^{\top}\right)$.
+
+            \begin{solution}
+                The nullity is $0$, so the kernel is the trivial vector space $\{\vec{0}\}$.
+            \end{solution}
+        \end{subparts}
+
+        \part \begin{subparts}
+            \subpart Find the solution of $A \vec{x}=\vec{b}$ closest (lowest squared Euclidean distance) to the origin $\overrightarrow{0}$.
+
+            \begin{solution}
+                A point $\vec{x}$ on the line has coordinates $\left(\lambda, 3+2\lambda, 5\lambda, 0\right)$.
+                We want to minimise $\|\vec{x}\|$, which is equivalent to minimising $\|\vec{x}\|^2$,
+                since we know that the norm is always non-negative.
+                \begin{align*}
+                    \|\vec{x}\|^2 & = \lambda^2 + (3+2\lambda)^2 + 5^2 + 0^2 \\
+                                  & = 5\lambda^2 + 12\lambda + 34
+                \end{align*}
+                This is minimised by $\lambda = -\frac{6}{5}$, which gives $\vec{x} = \left(-\frac{6}{5}, \frac{3}{5}, -6, 0\right)$.
+
+            \end{solution}
+
+            \subpart Find the projection of the vector
+            $\left[\begin{array}{cccc} 1 & 1 & 1 & 1 \end{array} \right]^\top$
+            onto the kernel $\operatorname{ker}(A)$.
+
+            \begin{solution}
+                Very similar method to previous question.
+                We minimise $$\| \vec{v} - \lambda \vec{x} \|^2 = \left(1-\lambda\right)^2 + \left(1-2\lambda\right)^2 + \left(1-5\lambda\right)^2 + 1 = 30 \lambda^2 -16 \lambda +4$$
+                with $\lambda = \frac{16}{60} = \frac{4}{15}$, giving us the projection
+                $\left[\begin{array}{cccc} \frac{4}{15} & \frac{8}{15} & \frac{4}{3} & 0 \end{array} \right]^\top$
+
+            \end{solution}
+        \end{subparts}
+    \end{parts}
+
+    \question
+    \begin{parts}
+        \part Let $A=\left[\begin{array}{cc}-1 & 2 \\ 3 & 4\end{array}\right]$
+
+        \begin{subparts}
+            \subpart Compute the eigenvalues and eigenspaces of $A$.
+
+            \begin{solution}
+                \[
+                    \begin{cases}
+                        \lambda_1 + \lambda_2 = \operatorname{tr}(A) & = 3   \\
+                        \lambda_1 \times \lambda_2 = \det(A)         & = -10
+                    \end{cases}
+                \]
+                We obtain the eigenvalues $\lambda_1 = -2, \lambda_2 = 5$.
+
+                Substituting these into $A$, we obtain the following matrices:
+                \[
+                    A_{\lambda_1} = \left[\begin{array}{cc} 1 & 2 \\ 3 & 6 \end{array}\right]
+                    \quad
+                    A_{\lambda_2} = \left[\begin{array}{cc} -6 & 2 \\ 3 & -1 \end{array}\right]
+                \]
+                We can read off the eigenspaces from these matrices directly:
+                \[ x = -2y \quad \text{and} \quad y = 3x \]
+                \[
+                    E_{\lambda_1} = \operatorname{span}\left\{\left[\begin{array}{c} -2 \\ 1 \end{array}\right]\right\}
+                    \quad \text{and} \quad
+                    E_{\lambda_2} = \operatorname{span}\left\{\left[\begin{array}{c} 1 \\ 3 \end{array}\right]\right\}
+                \]
+            \end{solution}
+
+            \subpart Determine a transformation matrix $B$ such that $B^{-1} A B$ is a diagonal matrix and provide this diagonal matrix.
+
+            \begin{solution}
+                We take the eigenvectors as the columns of $B$.
+                \[
+                    B = \left[\begin{array}{cc} -2 & 1 \\ 1 & 3 \end{array}\right]
+                \]
+
+                And the eigenvalues form the diagonal of $B^{-1} A B$.
+                \[
+                    B^{-1} A B
+                    = \left[\begin{array}{cc} -2 & 0 \\ 0 & 5 \end{array}\right]
+                \]
+            \end{solution}
+
+            \subpart Compute $A^9$
+
+            \begin{solution}
+                $A^9 = B(B^{-1} A B)^9 B^{-1}$. Since $B^{-1} A B$ is diagonal, we can raise each diagonal element to the power of $9$.
+
+                First, let us calculate $B^{-1}$.
+                \[
+                    B^{-1} = \frac{1}{\operatorname{det} B} \left[\begin{array}{cc} 3 & -1 \\ -1 & -2 \end{array}\right]
+                    = \frac{1}{7} \left[\begin{array}{cc} -3 & 1 \\ 1 & 2 \end{array}\right]
+                \]
+
+                Now, we can calculate $A^9$.
+                \[
+                    A^9 = B \left[\begin{array}{cc} (-2)^9 & 0 \\ 0 & 5^9 \end{array}\right] B^{-1}
+                    = \frac{1}{7} \left[\begin{array}{cc} -2 & 1 \\ 1 & 3 \end{array}\right]
+                    \left[\begin{array}{cc} (-2)^9 & 0 \\ 0 & 5^9 \end{array}\right]
+                    \left[\begin{array}{cc} -3 & 1 \\ 1 & 2 \end{array}\right]
+                \]
+
+                \[
+                    A^9 = \left[\begin{array}{cc}278579 & 558182\\837273 & 1674034\end{array}\right]
+                \]
+            \end{solution}
+
+            \subpart Find the expression for $A^{-2}$ in terms of $I, A$ and $A^2$ using the Cayley-Hamilton Theorem.
+
+            \begin{solution}
+                First, calculate the characteristic polynomial of $A$.
+                \[ p(\lambda) = \operatorname{det} \left(A - \lambda I\right) = \lambda^2 -3 \lambda -10 \]
+
+                According to the Cayley-Hamilton Theorem, $A$ satisfies its own characteristic polynomial, i.e. $p(A) = 0$.
+                \begin{align*}
+                    A^2    & = 3A + 10                          \\
+                    A      & = 3I + 10A^{-1}                    \\
+                    A^{-1} & = \frac{1}{10} \left(A - 3I\right) \\
+                    A^{-2} & = \frac{1}{100} \left( A^2 - 6A + 9I \right)
+                \end{align*}
+
+
+            \end{solution}
+        \end{subparts}
+
+        \part Let $\vec{a}_1, \vec{a}_2, \vec{a}_3, \vec{a}_4 \in \mathbb{R}^4$ such that,
+        $$
+            \vec{a}_1=\left[\begin{array}{l}
+                    0 \\
+                    0 \\
+                    0 \\
+                    1
+                \end{array}\right], \vec{a}_2=\left[\begin{array}{l}
+                    0 \\
+                    1 \\
+                    1 \\
+                    1
+                \end{array}\right], \vec{a}_3=\left[\begin{array}{l}
+                    1 \\
+                    0 \\
+                    1 \\
+                    1
+                \end{array}\right], \vec{a}_4=\left[\begin{array}{l}
+                    1 \\
+                    1 \\
+                    0 \\
+                    1
+                \end{array}\right]
+        $$
+        Let $A=\left(\vec{a}_1, \vec{a}_2, \vec{a}_3, \vec{a}_4\right)$
+        \begin{subparts}
+            \subpart Show that $A$ is an ordered basis of $\mathbb{R}^4$.
+
+
+            \begin{solution}
+                We can use EROs to reduce $A$ to the identity matrix for $\mathbb{R}^4$.
+                Since the identity matrix is a basis for $\mathbb{R}^4$, $A$ is also a basis for $\mathbb{R}^4$.
+            \end{solution}
+
+            \subpart Let $B=\left(\vec{b}_1, \vec{b}_2, \vec{b}_3, \vec{b}_4\right)$ be an orthonormal basis of $\mathbb{R}^4$ such that $\vec{b}_1=\vec{a}_1$. Find $\vec{b}_2, \vec{b}_3$, and $\vec{b}_4$.
+
+            \begin{solution}
+                The Gram-Schmidt method would produce an orthonormal basis as required.
+                However, notice that $\vec{b}_1$ is one of the standard basis vectors of $\mathbb{R}^4$.
+                The standard basis is already orthonormal,
+                therefore we can take the remaining standard basis vectors of $\mathbb{R}^4$ as $\vec{b}_2, \vec{b}_3$ and $\vec{b}_4$.
+
+                \[
+                    B = \left[ \begin{array}{cccc}
+                            0 & 1 & 0 & 0 \\
+                            0 & 0 & 1 & 0 \\
+                            0 & 0 & 0 & 1 \\
+                            1 & 0 & 0 & 0
+                        \end{array} \right]
+                \]
+            \end{solution}
+
+            \subpart Consider a vector $\vec{x}_0$ whose coordinates with respect to $A$ are
+            $$
+                \vec{x}_0=\left[\begin{array}{llll}
+                        1 & 1 & 1 & 1
+                    \end{array}\right]_{\text {w.r.t.\,} A}^{\top}
+            $$
+            Compute the coordinates of $\vec{x}_0$ with respect to $B$.
+
+            \begin{solution}
+                Call the standard basis $E$. Then
+                \[
+                    \vec{x}_{0\; \text{ w.r.t.\,} E} = A \times \vec{x}_{0\; \text{ w.r.t.\,} A} =
+                    \left[ \begin{array}{c} 2 \\ 2 \\ 2 \\ 4 \end{array} \right]
+                \]
+
+                To go from the standard basis to $B$, pre-multiply by $B^{-1}$, which in this case is equivalent to rotating the entries of the vector.
+                \[
+                    \vec{x}_{0\; \text{ w.r.t.\,} B} = \left[ \begin{array}{c} 4 \\ 2 \\ 2 \\ 2 \end{array} \right]
+                \]
+
+            \end{solution}
+
+            \subpart Also, consider a vector $\vec{y}_0$ whose coordinates with respect to $B$ are
+            $$
+                \vec{y}_0=\left[\begin{array}{llll}
+                        1 & 1 & 1 & 1
+                    \end{array}\right]_{\text {w.r.t\,} B}^{\top}
+            $$
+            Compute the coordinates of $\vec{y}_0$ with respect to $A$.
+
+            \begin{solution}
+                $B$ is a rearrangement of the standard basis, so this vector remains unchanged on conversion.
+                To go from the standard basis to $A$, we pre-multiply by $A^{-1}$.
+                We compute $A^{-1}$ using EROs on the augmented matrix $[\, A \mid I_4 \,]$.
+
+                \[
+                    A^{-1} = \frac{1}{2} \left[ \begin{array}{cccc}
+                            -1 & -1 & -1 & 2 \\-1 & 1 & 1 & 0\\1 & -1 & 1 & 0\\1 & 1 & -1 & 0
+                        \end{array}\right]
+                \]
+
+                \[
+                    \vec{y}_{0 \; \text{ w.r.t.\,} A} = A^{-1} \times \vec{y}_{0 \; \text{ w.r.t.\,} E} = \frac{1}{2} \left[ \begin{array}{c} -1 \\ 1 \\ 1 \\ 1 \end{array} \right]
+                \]
+
+            \end{solution}
+
+            \subpart Consider a linear mapping $f: \mathbb{R}^4 \rightarrow \mathbb{R}^4$ such that in terms of the standard ordered basis, it is defined as follows:
+            $$
+                f\left(\left[x_1, x_2, x_3, x_4\right]^{\top}\right)=\left[x_1+x_2, x_2+x_3, x_3+x_4, x_4+x_1\right]^{\top}
+            $$
+            Compute the same linear transformation $f$ in terms of different bases:
+            $$
+                f_{A B}: \mathbb{R}_B^4 \rightarrow \mathbb{R}_A^4
+            $$
+
+            \begin{solution}
+                $f$ is a linear map, so we can write it as a matrix $F$.
+                \[
+                    F_{E \leftarrow E} = \left[
+                        \begin{array}{cccc}
+                            1 & 1 & 0 & 0 \\0 & 1 & 1 & 0\\0 & 0 & 1 & 1\\1 & 0 & 0 & 1
+                        \end{array}
+                        \right]
+                \]
+
+                Using change of basis matrices, $F_{A \leftarrow B} = I_{A \leftarrow E} F_{E \leftarrow E} I_{E \leftarrow B}$.
+                We know that $A = I_{E \leftarrow A}$ and $B = I_{E \leftarrow B}$,
+                so we will require $I_{A \leftarrow E} = A^{-1}$, which we have already calculated.
+
+                \[
+                    F_{A \leftarrow B} = A^{-1} F B = \frac{1}{2} \left[
+                        \begin{array}{cccc}
+                            1 & 1 & -2 & -2 \\1 & -1 & 0 & 2\\1 & 1 & 0 & 0\\-1 & 1 & 2 & 0
+                        \end{array}
+                        \right]
+                \]
+
+                Writing it as a function, we have
+                $$
+                    f_{AB}\left(\left[x_1, x_2, x_3, x_4\right]^{\top}\right)
+                    =\frac{1}{2}\left[
+                        \begin{array}{c}
+                            x_{1} + x_{2} - 2 x_{3} - 2 x_{4} \\x_{1} - x_{2} + 2 x_{4}\\x_{1} + x_{2}\\- x_{1} + x_{2} + 2 x_{3}
+                        \end{array}
+                        \right]
+                $$
+            \end{solution}
+        \end{subparts}
+    \end{parts}
+\end{questions}
+
+\end{document}

@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+
+% Intra-PDF Links and Bookmarks 
+\usepackage[
+  % color my links blue
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  % necessary flag for PDF metadata to be written
+  luatex,
+  % various PDF metadata for SEO and good UX
+  pdfauthor={Imperial College London},
+  pdftitle={COMP40005 Computer Architecture Exam May 2023},
+  pdffitwindow=true,
+  pdflang=en-GB,
+  pdfmenubar=false,
+  pdfpagelayout=OneColumn,
+  pdfnewwindow=true
+]{hyperref}
+
+% in supported viewers, fit the page to horizontal width
+\hypersetup{pdfstartview={FitH top}}
+
+% A4, 0.5cm margins, header+footer
+\usepackage[a4paper, margin=1.91cm, top=2.91cm, bottom=2.91cm]{geometry}
+
+% Use UTF-8 so that we can have lots of nice characters!
+% uncomment if not using LuaLaTeX
+% \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\title{COMP40005 Computer Architecture Exam 2023}
+\author{Imperial College London}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Is the number of instructions executed per second a reliable way of comparing performance of difference processors? Provide three reasons to support your answer.
+        \item A subset of the instructions for processor $P$ can be sped up by $n$ times when executing them on the accelerator $A$. When a program $Q$ is compiled into the instructions of $P$ such that a fraction $f$ belongs to this subset, what is the speed improvement of $P$ when it is accelerated by $A$?
+        \item It is found that the accelerator $A$ costs $c$ times as much as the processor $P$. What is the minimum fraction of instructions for programs that $A$ has to speed up such that the accelerated processor is $c$ times faster than $P$?
+        \item As technology advances, the performance of $P$ is expected to improve by $m$ times per month. How many months would pass when $P$ alone can execute the program $Q$ as fast as the current $P$ when it is accelerated by $A$?
+        \item When a program $R$ is compiled into the instructions of $P$, a fraction $f$ of the instructions can be sped up $n$ times by the accelerator $A$ as before, and additionally a further fraction $g$ of the instructions can be sped up $k$ times by another accleerator $B$. What is the speed improvement of $P$ when it is accelerated by both $A$ and $B$?
+    \end{enumerate}
+
+    \vfill
+    \emph{The five parts carry, respectively, 15\%, 10\%, 15\%, 25\%, 35\% of the marks.}
+
+    \pagebreak
+
+    \item \begin{enumerate}
+        \item Compute the offset of each field, the size of the structure and its alignment requirement for x86-64, per each of the following structure declarations:
+        \begin{verbatim}
+            struct d1 { short i; long j; int *k; short *l; };
+            struct d2 { char a[3]; char *b[4] };
+            struct d3 { struct d1 c; struct d2 e[2]; }; \end{verbatim}
+        Suppose we have a pointer D3 type of \texttt{struct d3} and the address of \texttt{struct d3} is stored in register \texttt{\%rdi}, and integer index $i$ in \texttt{\%rsi}, respectively. Write the assembly code line for the following pseudo code instructions:
+        \begin{enumerate}
+            \item Store the value \texttt{D3->c.k} to register result \texttt{\%rax}.
+            \item Store the value \texttt{D3->e[index].a} to register result \texttt{\%rax}.
+        \end{enumerate}
+
+        \item Consider the following x86-64 optimised assembly function:
+        \begin{verbatim}
+            sum:
+                pushq %rbx
+                movq %rdi, %rdx
+                movl %esi, %edi
+                call randomise
+                testl %eax, %eax
+                je .L4
+                movl %eax, %eax
+                leaq (%rbx, %rax, 8), %rdx
+                movl $0, %eax
+            L3:
+                addq (%rbx), %rax
+                addq $8, %rbx
+                cmpq %rdx, %rbx
+                jne .L3
+            .L1:
+                popq %rbx
+                ret
+            .L4
+                movl $0, %eax
+                jmp .L1
+        \end{verbatim}
+
+        Fill in the blanks in the following \texttt{sum} function. You may only use the variable names \texttt{result}, \texttt{count}, \texttt{init} and \texttt{seed}, but not the register names.
+        \begin{verbatim}
+            long sum(long *init, int seed) {
+                int result = ___;
+                int count = ___;
+                while (___) {
+                    ___;
+                    ___;
+                    ___;
+                }
+                return ___;
+            }
+        \end{verbatim}
+
+        \pagebreak
+
+        \item A certain byte addressable memory system is 12 bits wide. 
+        Memory accesses are to 1-byte words. 
+        The cache is 2-way set associated (two lines), has 4 sets and the blocks are 4 bytes in size.
+        The contents of the cache are listed below. 
+
+        \begin{center}
+            \begin{tabular}{|l|l|l|l|l|l|l||l|l|l|l|l|l|}
+                \hline
+                Index & Tag & Valid & B0 & B1 & B2 & B3 & Tag & Valid & B0 & B1 & B2 & B3 \\
+                \hline 
+                0 & 12 & 1 & A2 & DF & E4 & DD & 05 & 1 & 25 & CF & 1D & F8 \\
+                1 & C5 & 0 & 25 & 23 & E4 & ED & 47 & 0 & 5A & 09 & 67 & AD \\
+                2 & F3 & 0 & 3B & F2 & 43 & 4D & 42 & 1 & DD & 7E & 34 & AB \\
+                3 & 97 & 1 & DD & FF & 34 & FC & BB & 0 & 5B & AC & 7B & DD \\
+                \hline 
+            \end{tabular}
+        \end{center}
+
+        The first tag, valid bit and bytes $0-3$ correspond to line 0. The second tag, valid bit and bytes $0-3$ correspond to line 1. 
+        
+        Provide the format of \texttt{0x42B} and \texttt{0x474} addresses.
+        Indicate the fields and bits that would be used to determine the block offset, set index and tag of each address in hexadecimal format. 
+        Also, indicate the cache entry for these two addresses, i.e. whether a cache hit or miss occurs in each of the two addresses. 
+        If a cache hit occurs, provide the cache byte returned.
+
+        In summary, for \texttt{0x42B} and \texttt{0x474} addresses provide
+        \begin{itemize}
+            \item the block offset bits, index bits and tag bits,
+            \item whether it is a cache hit or a miss,
+            \item the cache byte returned if it is a hit.
+        \end{itemize}
+    \end{enumerate}
+
+    \vfill
+    \emph{The two parts carry, respectively, 75\% and 25\% of the marks.}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,3 @@
+https://github.com/jordanspooner/haskell-tests
+https://github.com/kashparty/haskell-tests
+https://github.com/MMZK1526/doc-jan-haskell

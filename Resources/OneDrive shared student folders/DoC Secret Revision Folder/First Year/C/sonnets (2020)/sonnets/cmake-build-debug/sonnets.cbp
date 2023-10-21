@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sonnets"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="trie">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/trie.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 trie"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="trie/fast">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/trie.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 trie/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sonnets_trie">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/sonnets_trie.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 sonnets_trie"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sonnets_trie/fast">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/sonnets_trie.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 sonnets_trie/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sonnets_map">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/sonnets_map.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 sonnets_map"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sonnets_map/fast">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/sonnets_map.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 sonnets_map/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testA">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/testA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 testA"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testA/fast">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/testA.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 testA/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testB">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/testB.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 testB"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testB/fast">
+				<Option output="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/testB.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/."/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.1.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 testB/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/maps.c">
+			<Option target="sonnets_trie"/>
+			<Option target="sonnets_map"/>
+			<Option target="testB"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/maps.h">
+			<Option target="sonnets_trie"/>
+			<Option target="sonnets_map"/>
+			<Option target="testB"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/sonnets.c">
+			<Option target="sonnets_trie"/>
+			<Option target="sonnets_map"/>
+			<Option target="testB"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/sonnets.h">
+			<Option target="sonnets_trie"/>
+			<Option target="sonnets_map"/>
+			<Option target="testB"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/testA.c">
+			<Option target="testA"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/testB.c">
+			<Option target="testB"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/trie.c">
+			<Option target="trie"/>
+			<Option target="sonnets_trie"/>
+			<Option target="sonnets_map"/>
+			<Option target="testA"/>
+			<Option target="testB"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/trie.h">
+			<Option target="trie"/>
+			<Option target="sonnets_trie"/>
+			<Option target="sonnets_map"/>
+			<Option target="testA"/>
+			<Option target="testB"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/dictionary.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/empty.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/petrarch.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/shakespeare.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/24260/OneDrive - Imperial College London/DoC Secret Revision Folder/First Year/C/sonnets (2020)/sonnets/spenser.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,6 @@
+This repo contains the (Haskell) implementation of most of the algorithms covered in 40008.
+Take a look at Examples.hs for a quick guide.
+
+https://github.com/sorrowfulT-Rex/Haskell-Graphs
+
+Don't worry if the Haskell looks unfamiliar; it makes use of many topics well beyond the first year Haskell module xD
