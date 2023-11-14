@@ -1,4 +1,5 @@
 # Lecture 1: Introduction to Object Oriented Programming with Kotlin 13-11-2023
+
 - [Lecture 1: Introduction to Object Oriented Programming with Kotlin 13-11-2023](#lecture-1-introduction-to-object-oriented-programming-with-kotlin-13-11-2023)
   - [Information about the lecturers](#information-about-the-lecturers)
   - [Information about Kotlin](#information-about-kotlin)
@@ -10,18 +11,28 @@
     - [Tuples](#tuples)
     - [Strings](#strings)
     - [Lists](#lists)
+- [Lecture 2: Object Oriented Programming with Kotlin 14-11-2023](#lecture-2-object-oriented-programming-with-kotlin-14-11-2023)
+  - [Constants in Kotlin](#constants-in-kotlin)
+  - [Defining variables as lambda expressions and functions](#defining-variables-as-lambda-expressions-and-functions)
+  - [Defining functions polymorphically](#defining-functions-polymorphically)
+  - [Getters and setters](#getters-and-setters)
+  - [Tuples and destructuring](#tuples-and-destructuring)
+  - [Higher Order Functions in Kotlin](#higher-order-functions-in-kotlin)
 
 ## Information about the lecturers
+
 - Run by Robert Chatley
-- rbc@imperial.ac.uk
+- <rbc@imperial.ac.uk>
 
 ## Information about Kotlin
+
 - To access the kotlin website, use kotlinlang.org for documentation etc.
 - Use IntelliJ IDEA for Kotlin
 - Kotlin is not whitespace sensitive
 - Control + alt + L to reformat and align code automatically
 
 ## Writing functions in Haskell and Kotlin
+
 1. Here is an example of a successor function in Haskell vs Kotlin
 
 The haskell version:
@@ -130,10 +141,9 @@ difference(4.0, 6.0)
 
 ## Practice problems in Kotlin - My answers
 
-
 Try the following:
 
-1.  Write a function bigger() to determine which of two integers is the largest. Edit the code below to complete the function and then hit play to test your solution. You don't need to write a main() function here.
+1. Write a function bigger() to determine which of two integers is the largest. Edit the code below to complete the function and then hit play to test your solution. You don't need to write a main() function here.
 
 ```kotlin
 fun bigger(x: Int, y: Int): Int = 
@@ -172,10 +182,10 @@ fun fact(n: Int): Int =
         else -> fact(n-1) * n
     }
 ```
+
 ​
 
 4. Write a recursive function fib() to calculate the nth Fibonacci number:
-
 
 ```kotlin
 fun fib(n: Int): Int =
@@ -190,7 +200,7 @@ fun fib(n: Int): Int =
 
 Try the following:
 
-1.  Write a function bigger() to determine which of two integers is the largest. Edit the code below to complete the function and then hit play to test your solution. You don't need to write a main() function here.
+1. Write a function bigger() to determine which of two integers is the largest. Edit the code below to complete the function and then hit play to test your solution. You don't need to write a main() function here.
 
 ```kotlin
 fun bigger(x: Int, y: Int): Int = 
@@ -218,7 +228,6 @@ fun fact(n: Int): Int =
 
 4. Write a recursive function fib() to calculate the nth Fibonacci number:
 
-
 ```kotlin
 fun fib(n: Int): Int =
     when (n) {
@@ -228,6 +237,7 @@ fun fib(n: Int): Int =
 ```
 
 ## Data types
+
 - We have covered functions, ints and Bools. Other common data types include:
 
 ### Tuples
@@ -296,6 +306,7 @@ h("Bye")
 ```Kotlin
 val xs = listOf(1,2,3,4,5,6)
 ```
+
 - Kotlin will automatically figure out what the type of the elements of the list are
 - If you want to manually declare this, write:
 
@@ -369,3 +380,96 @@ fun applyFuncTo(x: Int, f: (Int) -> Int): Int = f(x)
 string.map { x-> s.uppercase()}
 ```
 
+# Lecture 2: Object Oriented Programming with Kotlin 14-11-2023
+
+## Constants in Kotlin
+
+- We can define a constant as follows:
+
+```kotlin
+const val GOLDEN_RATIO = 1.618
+```
+
+- Values for constants are computed at compile time
+
+## Defining variables as lambda expressions and functions
+
+- Functions can be defined with the same name as a variable
+- If you have a variable that is equal to a lambda expression, and name a function with the same name as the variable, Kotlin will dynamically use the correct reference based on the situation
+
+## Defining functions polymorphically
+
+- We can define a polymorphic function that composes two functions together as follows
+
+```kotlin
+fun <A, B, C> compose(f: (B) -> C, g: (A) -> B): (A) -> C = {x -> f(g(x))}
+
+val l: (String) -> Int = {s: String -> s.length}
+```
+
+ ## Getters and setters
+
+ - To access the elements of a list
+
+```kotlin
+val first = strs[0]
+// The above gets hte first element
+val second = strs[1]
+// The above gets the second element
+```
+
+- You cannot wrap around like in python, i.e we can't do `strs[-1]`
+
+## Tuples and destructuring
+
+- We can destructure a list as follows to extract the elements of a tuple
+
+```kotlin
+val p: Pair<Int, Int> = Pair(6,7)
+
+val (f, s) = p
+```
+
+- The above will allow for you to access items of a tuple using destructuring
+- If you do the same on a list:
+
+
+```kotlin
+var strs = listOf("quick", "brown", "fox")
+
+val (f, s) = p
+println(f) // This will return "quick"
+println(s) // This will return "brown"
+```
+
+## Higher Order Functions in Kotlin
+
+- The map function will perform a lambda expression upon each element of a list
+- The filter function will allow an element to remain in a list if the boolean output of a lambda expression is true
+
+```kotlin
+fun lengths(strs: List<String>): List<Int> {
+    var k = strs.map {x: String -> x.length}
+    return k
+}
+// This will return a list of lengths given a list 
+```
+
+```kotlin
+
+fun complements(nums: List<Int>): List<Pair<Int, Int>> {
+    var k = nums.map {x -> Pair(x, 10-x)}
+    return k
+}
+// This will return a list of pairs of complements given a list of ints
+```
+
+```kotlin
+
+val pairs = listOf(Pair(1, 9), Pair(3, 4), Pair(5, 5))
+
+fun matchingTotal(x: Int, pairs: List<Pair<Int, Int>>): List<Pair<Int, Int>> {
+    return pairs.filter {(m,y) -> m+y == x }
+}
+// This is an example of using filter to remove pairs from a list of pairs who's sum of its elements does not meet a given integer
+```
