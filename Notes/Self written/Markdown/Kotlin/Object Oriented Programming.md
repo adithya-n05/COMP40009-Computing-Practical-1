@@ -339,3 +339,33 @@ xs.map(square2)
 //now we do not need a double colon
 ```
 
+- To define an anonymous function
+
+```kotlin
+xs.map({x -> x * x})
+// This the most common form of mapping
+// The version of creating a value which is then used as a map is not as common as using a lambda function
+// We can actually write it as either of the two ways below, where the lambda is the only or the last parameter of the method, we can write as follows
+xs.map {x -> x * x}
+// or
+xs.map () {x -> x * x}
+```
+
+- We can apply a lambda function twice
+
+```kotlin
+xs.map(squareFunc).map {y -> y + 1}
+```
+
+- You can define functions to apply functions to values
+
+```kotlin
+fun applyFuncTo(x: Int, f: (Int) -> Int): Int = f(x)
+```
+
+- Looking more specifically at HOFs and lists of strings
+
+```kotlin
+string.map { x-> s.uppercase()}
+```
+
