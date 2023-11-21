@@ -407,9 +407,9 @@ fun <A, B, C> compose(f: (B) -> C, g: (A) -> B): (A) -> C = {x -> f(g(x))}
 val l: (String) -> Int = {s: String -> s.length}
 ```
 
- ## Getters and setters
+## Getters and setters
 
- - To access the elements of a list
+- To access the elements of a list
 
 ```kotlin
 val first = strs[0]
@@ -432,7 +432,6 @@ val (f, s) = p
 
 - The above will allow for you to access items of a tuple using destructuring
 - If you do the same on a list:
-
 
 ```kotlin
 var strs = listOf("quick", "brown", "fox")

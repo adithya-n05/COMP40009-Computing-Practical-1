@@ -8,6 +8,7 @@
 ## Defining our own data types
 
 ### Type aliases
+
 - Consider the code:
 
 ```kotlin
@@ -29,6 +30,7 @@ fun distanceBetween(Pair<Int, Int>, Pair<Int, Int>) {
 ```kotlin
 typealias Point = Pair<Int, Int>
 ```
+
 - We can then change hte function as follows to now take Points instead of Pairs:
 
 ```kotlin
