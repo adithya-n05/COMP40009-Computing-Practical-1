@@ -13,3 +13,8 @@ result.append("start - end")
 
 - Use `zipWithNext()`
   - Returns a list with each item placed in a tuple with the next item
+
+- `${numChanges()}` - this will add a variable/functions value in a string and is a valid way of building strings
+
+- Pseudocode for stack based method of searching through the tree
+  - 

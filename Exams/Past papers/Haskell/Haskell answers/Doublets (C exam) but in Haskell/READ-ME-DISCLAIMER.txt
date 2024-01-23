@@ -1,0 +1,18 @@
+ This is originally the "doublets" C exam, but I decided to do
+    the implementation in Haskell, the spec is attached. 
+
+    If you're preparing for the Haskell exam and don't wanna do past exams, 
+    this is good practice, it uses the recursion heavily as well higher-order
+    functions.
+
+    Even if you haven't done C, you can understand the spec easily, it's just 
+    the doublets game. I did not exactly follow the C spec for this, but I just implemented
+    the WordTree data structure 
+
+
+    Run the game with > search <word1> <word2> <chain_size>
+    and it will return whether there exists a chain of the 
+    given size from word1 to word2, given the dictionary
+    "words.txt"
+
+    Stuff like this is so much simpler in Haskell
